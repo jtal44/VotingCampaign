@@ -1,5 +1,7 @@
 extends Label
 
+var player1 = 0
+var player2 = 0
 
 func _ready():
 	var random_chance = randf() # Generates a random float between 0.0 and 1.0
