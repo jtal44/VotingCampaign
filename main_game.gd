@@ -295,35 +295,50 @@ func showSpriteWhenBothAreOne():
 			twobytwo = 0
 			squareone = squareone + 1
 			squaresix = squaresix + 1
-			squareone_check()
+			if squareone == 4:
+				squareone_check()
+			else:
+				squaresix_check()
 		if  twobytwo == 1 and twobythree == 1:
 			$'p1-2223-over'.visible = true
 			twobytwo = 0
 			twobythree = 0
 			squaretwo = squaretwo + 1
 			squareseven = squareseven + 1
-			squaretwo_check()
+			if squaretwo == 4:
+				squaretwo_check()
+			else:
+				squareseven_check()
 		if twobythree == 1 and twobyfour == 1:
 			$'p1-2324-over'.visible = true
 			twobythree = 0
 			twobyfour = 0
 			squarethree = squarethree + 1
 			squareeight = squareeight + 1
-			squarethree_check()
+			if squarethree == 4:
+				squarethree_check()
+			else:
+				squareeight_check()
 		if twobyfour == 1 and twobyfive == 1:
 			$'p1-2425-over'.visible = true
 			twobyfour = 0
 			twobyfive = 0
 			squarefour = squarefour + 1
 			squarenine = squarenine + 1
-			squarefour_check()
+			if squarefour == 4:
+				squarefour_check()
+			else:
+				squarenine_check()
 		if twobyfive == 1 and twobysix == 1:
 			$'p1-2526-over'.visible = true
 			twobyfive = 0
 			twobysix = 0
 			squarefive = squarefive + 1
 			squareten = squareten + 1
-			squarefive_check()
+			if squarefive == 4:
+				squarefive_check()
+			else:
+				squareten_check()
 		if onebyone == 1 and twobyone == 1:
 			$'p1-1121-up'.visible = true
 			onebyone = 0
@@ -346,24 +361,30 @@ func showSpriteWhenBothAreOne():
 			twobythree = 0
 			squaretwo = squaretwo + 1
 			squarethree = squarethree + 1
-			squaretwo_check()
-			squarethree_check()
+			if squaretwo == 4:
+				squaretwo_check()
+			else:
+				squarethree_check()
 		if  onebyfour == 1 and twobyfour == 1:
 			$'p1-1424-up'.visible = true
 			onebyfour = 0
 			twobyfour = 0
 			squarethree = squarethree + 1
 			squarefour = squarefour + 1
-			squarethree_check()
-			squarefour_check()
+			if squarethree == 4:
+				squarethree_check()
+			else:
+				squarefour_check()
 		if  onebyfive == 1 and twobyfive == 1:
 			$'p1-1525-up'.visible = true
 			onebyfive = 0
 			twobyfive = 0
 			squarefour = squarefour + 1
 			squarefive = squarefive + 1
-			squarefour_check()
-			squarefive_check()
+			if squarefour == 4:
+				squarefour_check()
+			else:
+				squarefive_check()
 		if  onebysix == 1 and twobysix == 1:
 			$'p1-1626-up'.visible = true
 			onebysix = 0
@@ -382,29 +403,40 @@ func showSpriteWhenBothAreOne():
 			threebytwo = 0
 			squaresix = squaresix + 1
 			squareseven = squareseven + 1
-			squaresix_check()
-			#squaretwo_check()
+			if squaresix == 4:
+				squaresix_check()
+			else:
+				squareseven_check()
 		if  twobythree == 1 and threebythree == 1:
 			$'p1-2333-up'.visible = true
 			twobythree = 0
 			threebythree = 0
 			squareseven = squareseven + 1
 			squareeight = squareeight + 1
-			squareseven_check()
+			if squareseven == 4:
+				squareseven_check()
+			else:
+				squareeight_check()
 		if  twobyfour == 1 and threebyfour == 1:
 			$'p1-2434-up'.visible = true
 			twobyfour = 0
 			threebyfour = 0
 			squareeight = squareeight + 1
 			squarenine = squarenine + 1
-			squareeight_check()
+			if squareeight == 4:
+				squareeight_check()
+			else:
+				squarenine_check()
 		if  twobyfive == 1 and threebyfive == 1:
 			$'p1-2535-up'.visible = true
 			twobyfive = 0
 			threebyfive = 0
 			squarenine = squarenine + 1
 			squareten = squareten + 1
-			squarenine_check()
+			if squarenine == 4:
+				squarenine_check()
+			else:
+				squareten_check()
 		if  twobysix == 1 and threebysix == 1:
 			$'p1-2636-up'.visible = true
 			twobysix = 0
@@ -423,29 +455,40 @@ func showSpriteWhenBothAreOne():
 			fourbytwo = 0
 			squareeleven = squareeleven + 1
 			squaretwelve = squaretwelve + 1
-			squareeleven_check()
-			#squaretwo_check()
+			if squareeleven == 4:
+				squareeleven_check()
+			else:
+				squaretwelve_check()
 		if  threebythree == 1 and fourbythree == 1:
 			$'p1-3343-up'.visible = true
 			threebythree = 0
 			fourbythree = 0
 			squaretwelve = squaretwelve + 1
 			squarethirteen = squarethirteen + 1
-			squaretwelve_check()
+			if squaretwelve == 4:
+				squaretwelve_check()
+			else:
+				squarethirteen_check()
 		if  threebyfour == 1 and fourbyfour == 1:
 			$'p1-3444-up'.visible = true
 			threebyfour = 0
 			fourbyfour = 0
 			squarethirteen = squarethirteen + 1
 			squarefourteen = squarefourteen + 1
-			squarethirteen_check()
+			if squarethirteen == 4:
+				squarethirteen_check()
+			else:
+				squarefourteen_check()
 		if  threebyfive == 1 and fourbyfive == 1:
 			$'p1-3545-up'.visible = true
 			threebyfive = 0
 			fourbyfive = 0
 			squarefourteen = squarefourteen + 1
 			squarefifteen = squarefifteen + 1
-			squarefourteen_check()
+			if squarefourteen == 4:
+				squareone_check()
+			else:
+				squarefifteen_check()
 		if  threebysix == 1 and fourbysix == 1:
 			$'p1-3646-up'.visible = true
 			threebysix = 0
@@ -464,7 +507,10 @@ func showSpriteWhenBothAreOne():
 			fivebytwo = 0
 			squaresixteen = squaresixteen + 1
 			squareseventeen = squareseventeen + 1
-			squaresixteen_check()
+			if squaresixteen == 4:
+				squaresixteen_check()
+			else:
+				squareseventeen_check()
 			#squaretwo_check()
 		if  fourbythree == 1 and fivebythree == 1:
 			$'p1-4353-up'.visible = true
@@ -472,21 +518,30 @@ func showSpriteWhenBothAreOne():
 			fivebythree = 0
 			squareseventeen = squareseventeen + 1
 			squareeightteen = squareeightteen + 1
-			squareseventeen_check()
+			if squareseventeen == 4:
+				squareseventeen_check()
+			else:
+				squareeightteen_check()
 		if  fourbyfour == 1 and fivebyfour == 1:
 			$'p1-4454-up'.visible = true
 			fourbyfour = 0
 			fivebyfour = 0
 			squareeightteen = squareeightteen + 1
 			squarenineteen = squarenineteen + 1
-			squareeightteen_check()
+			if squareeightteen == 4:
+				squareeightteen_check()
+			else:
+				squarenineteen_check()
 		if  fourbyfive == 1 and fivebyfive == 1:
 			$'p1-4555-up'.visible = true
 			fourbyfive = 0
 			fivebyfive = 0
 			squarenineteen = squarenineteen + 1
 			squaretwenty = squaretwenty + 1
-			squarenineteen_check()
+			if squarenineteen == 4:
+				squarenineteen_check()
+			else:
+				squaretwenty_check()
 		if  fourbysix == 1 and fivebysix == 1:
 			$'p1-4656-up'.visible = true
 			fourbysix = 0
@@ -499,35 +554,130 @@ func showSpriteWhenBothAreOne():
 			threebytwo = 0
 			squaresix = squaresix + 1
 			squareeleven = squareeleven + 1
-			squaresix_check()
+			if squaresix == 4:
+				squaresix_check()
+			else:
+				squareeleven_check()
 		if  threebytwo == 1 and threebythree == 1:
 			$'p1-3233-over'.visible = true
 			threebytwo = 0
 			threebythree = 0
 			squareseven = squareseven + 1
 			squaretwelve = squaretwelve + 1
-			squareseven_check()
+			if squareseven == 4:
+				squareseven_check()
+			else:
+				squaretwelve_check()
 		if  threebythree == 1 and threebyfour == 1:
 			$'p1-3334-over'.visible = true
 			threebythree = 0
 			threebyfour = 0
 			squareeight = squareeight + 1
 			squarethirteen = squarethirteen + 1
-			squareeight_check()
+			if squareeight == 4:
+				squareeight_check()
+			else:
+				squarethirteen_check()
 		if  threebyfour == 1 and threebyfive == 1:
 			$'p1-3435-over'.visible = true
 			threebyfour = 0
 			threebyfive = 0
 			squarenine = squarenine + 1
 			squarefourteen = squarefourteen + 1
-			squarenine_check()
+			if squarenine == 4:
+				squarenine_check()
+			else:
+				squarefourteen_check()
 		if  threebyfive == 1 and threebysix == 1:
 			$'p1-3536-over'.visible = true
 			threebyfive = 0
 			threebysix = 0
 			squareten = squareten + 1
 			squarefifteen = squarefifteen + 1
-			squareten_check()
+			if squareten == 4:
+				squareten_check()
+			else:
+				squarefifteen_check()
+		if  fourbyone == 1 and fourbytwo == 1:
+			$'p1-4142-over'.visible = true
+			fourbyone = 0
+			fourbytwo = 0
+			squareeleven = squareeleven + 1
+			squaresixteen = squaresixteen + 1
+			if squareeleven == 4:
+				squareeleven_check()
+			else:
+				squaresixteen_check()
+		if  fourbytwo == 1 and fourbythree == 1:
+			$'p1-4243-over'.visible = true
+			fourbytwo = 0
+			fourbythree = 0
+			squaretwelve = squaretwelve + 1
+			squareseventeen = squareseventeen + 1
+			if squaretwelve == 4:
+				squaretwelve_check()
+			else:
+				squareseventeen_check()
+		if  fourbythree == 1 and fourbyfour == 1:
+			$'p1-4344-over'.visible = true
+			fourbythree = 0
+			fourbyfour = 0
+			squarethirteen = squarethirteen + 1
+			squareeightteen = squareeightteen + 1
+			if squarethirteen == 4:
+				squarethirteen_check()
+			else:
+				squareeightteen_check()
+		if  fourbyfour == 1 and fourbyfive == 1:
+			$'p1-4445-over'.visible = true
+			fourbyfour = 0
+			fourbyfive = 0
+			squarefourteen = squarefourteen + 1
+			squarenineteen = squarenineteen + 1
+			if squarefourteen == 4:
+				squarefourteen_check()
+			else:
+				squarenineteen_check()
+		if  fourbyfive == 1 and fourbysix == 1:
+			$'p1-4546-over'.visible = true
+			fourbyfive = 0
+			fourbysix = 0
+			squarefifteen = squarefifteen + 1
+			squaretwenty = squaretwenty + 1
+			if squarefifteen == 4:
+				squarefifteen_check()
+			else:
+				squaretwenty_check()
+		if fivebyone == 1 and fivebytwo == 1:
+			$'p1-5152-over'.visible = true
+			fivebyone = 0
+			fivebytwo = 0
+			squaresixteen = squaresixteen + 1
+			squaresixteen_check()
+		if  fivebytwo == 1 and fivebythree == 1:
+			$'p1-5253-over'.visible = true
+			fivebytwo = 0
+			fivebythree = 0
+			squareseventeen = squareseventeen + 1
+			squareseventeen_check()
+		if  fivebythree == 1 and fivebyfour == 1:
+			$'p1-5354-over'.visible = true
+			fivebythree = 0
+			fivebyfour = 0
+			squareeightteen = squareeightteen + 1
+			squareeightteen_check()
+		if  fivebyfour == 1 and fivebyfive == 1:
+			$'p1-5455-over'.visible = true
+			fivebyfour = 0
+			fivebyfive = 0
+			squarenineteen = squarenineteen + 1
+			squarenineteen_check()
+		if  fivebyfive == 1 and fivebysix == 1:
+			$'p1-5556-over'.visible = true
+			fivebyfive = 0
+			fivebysix = 0
+			squaretwenty = squaretwenty + 1
+			squaretwenty_check()
 
 
 
@@ -544,7 +694,11 @@ func showSpriteWhenBothAreOne():
 			twobyone = 0
 			twobytwo = 0
 			squareone = squareone + 1
-			squareone_check()
+			squaresix = squaresix + 1
+			if squareone == 4:
+				squareone_check()
+			else:
+				squaresix_check()
 		if onebyone == 1 and twobyone == 1:
 			$'p2-1121-up'.visible = true
 			onebyone = 0
@@ -573,31 +727,40 @@ func showSpriteWhenBothAreOne():
 			twobythree = 0
 			squaretwo = squaretwo + 1
 			squareseven = squareseven + 1
-			squaretwo_check()
+			if squaretwo == 4:
+				squaretwo_check()
+			else:
+				squareseven_check()
 		if  onebythree == 1 and twobythree == 1:
 			$'p2-1323-up'.visible = true
 			onebythree = 0
 			twobythree = 0
 			squaretwo = squaretwo + 1
 			squarethree = squarethree + 1
-			squaretwo_check()
-			squarethree_check()
+			if squaretwo == 4:
+				squaretwo_check()
+			else:
+				squarethree_check()
 		if  onebyfour == 1 and twobyfour == 1:
 			$'p2-1424-up'.visible = true
 			onebyfour = 0
 			twobyfour = 0
 			squarethree = squarethree + 1
 			squarefour = squarefour + 1
-			squarethree_check()
-			squarefour_check()
+			if squarethree == 4:
+				squarethree_check()
+			else:
+				squarefour_check()
 		if  onebyfive == 1 and twobyfive == 1:
 			$'p2-1525-up'.visible = true
 			onebyfive = 0
 			twobyfive = 0
 			squarefour = squarefour + 1
 			squarefive = squarefive + 1
-			squarefour_check()
-			squarefive_check()
+			if squarefour == 4:
+				squarefour_check()
+			else:
+				squarefive_check()
 		if  onebysix == 1 and twobysix == 1:
 			$'p2-1626-up'.visible = true
 			onebysix = 0
@@ -628,21 +791,30 @@ func showSpriteWhenBothAreOne():
 			twobyfour = 0
 			squarethree = squarethree + 1
 			squareeight = squareeight + 1
-			squarethree_check()
+			if squarethree == 4:
+				squarethree_check()
+			else:
+				squareeight_check()
 		if twobyfour == 1 and twobyfive == 1:
 			$'p2-2425-over'.visible = true
 			twobyfour = 0
 			twobyfive = 0
 			squarefour = squarefour + 1
 			squarenine = squarenine + 1
-			squarefour_check()
+			if squarefour == 4:
+				squarefour_check()
+			else:
+				squarenine_check()
 		if twobyfive == 1 and twobysix == 1:
 			$'p2-2526-over'.visible = true
 			twobyfive = 0
 			twobysix = 0
 			squarefive = squarefive + 1
 			squareten = squareten + 1
-			squarefive_check()
+			if squarefive == 4:
+				squarefive_check()
+			else:
+				squareten_check()
 		if twobyone == 1 and threebyone == 1:
 			$'p2-2131-up'.visible = true
 			twobyone = 0
@@ -655,29 +827,40 @@ func showSpriteWhenBothAreOne():
 			threebytwo = 0
 			squaresix = squaresix + 1
 			squareseven = squareseven + 1
-			squaresix_check()
-			#squaretwo_check()
+			if squaresix == 4:
+				squaresix_check()
+			else:
+				squareseven_check()
 		if  twobythree == 1 and threebythree == 1:
 			$'p2-2333-up'.visible = true
 			twobythree = 0
 			threebythree = 0
 			squareseven = squareseven + 1
 			squareeight = squareeight + 1
-			squareseven_check()
+			if squareseven == 4:
+				squareseven_check()
+			else:
+				squareeight_check()
 		if  twobyfour == 1 and threebyfour == 1:
 			$'p2-2434-up'.visible = true
 			twobyfour = 0
 			threebyfour = 0
 			squareeight = squareeight + 1
 			squarenine = squarenine + 1
-			squareeight_check()
+			if squareeight == 4:
+				squareeight_check()
+			else:
+				squarenine_check()
 		if  twobyfive == 1 and threebyfive == 1:
 			$'p2-2535-up'.visible = true
 			twobyfive = 0
 			threebyfive = 0
 			squarenine = squarenine + 1
 			squareten = squareten + 1
-			squarenine_check()
+			if squarenine == 4:
+				squarenine_check()
+			else:
+				squareten_check()
 		if  twobysix == 1 and threebysix == 1:
 			$'p2-2636-up'.visible = true
 			twobysix = 0
@@ -696,29 +879,40 @@ func showSpriteWhenBothAreOne():
 			fourbytwo = 0
 			squareeleven = squareeleven + 1
 			squaretwelve = squaretwelve + 1
-			squareeleven_check()
-			#squaretwo_check()
+			if squareeleven == 4:
+				squareeleven_check()
+			else:
+				squaretwelve_check()
 		if  threebythree == 1 and fourbythree == 1:
 			$'p2-3343-up'.visible = true
 			threebythree = 0
 			fourbythree = 0
 			squaretwelve = squaretwelve + 1
 			squarethirteen = squarethirteen + 1
-			squaretwelve_check()
+			if squaretwelve == 4:
+				squaretwelve_check()
+			else:
+				squarethirteen_check()
 		if  threebyfour == 1 and fourbyfour == 1:
 			$'p2-3444-up'.visible = true
 			threebyfour = 0
 			fourbyfour = 0
 			squarethirteen = squarethirteen + 1
 			squarefourteen = squarefourteen + 1
-			squarethirteen_check()
+			if squarethirteen == 4:
+				squarethirteen_check()
+			else:
+				squarefourteen_check()
 		if  threebyfive == 1 and fourbyfive == 1:
 			$'p2-3545-up'.visible = true
 			threebyfive = 0
 			fourbyfive = 0
 			squarefourteen = squarefourteen + 1
 			squarefifteen = squarefifteen + 1
-			squarefourteen_check()
+			if squarefourteen == 4:
+				squarefourteen_check()
+			else:
+				squarefifteen_check()
 		if  threebysix == 1 and fourbysix == 1:
 			$'p2-3646-up'.visible = true
 			threebysix = 0
@@ -737,29 +931,40 @@ func showSpriteWhenBothAreOne():
 			fivebytwo = 0
 			squaresixteen = squaresixteen + 1
 			squareseventeen = squareseventeen + 1
-			squaresixteen_check()
-			#squaretwo_check()
+			if squaresixteen == 4:
+				squaresixteen_check()
+			else:
+				squareseventeen_check()
 		if  fourbythree == 1 and fivebythree == 1:
 			$'p2-4353-up'.visible = true
 			fourbythree = 0
 			fivebythree = 0
 			squareseventeen = squareseventeen + 1
 			squareeightteen = squareeightteen + 1
-			squareseventeen_check()
+			if squareseventeen == 4:
+				squareseventeen_check()
+			else:
+				squareeightteen_check()
 		if  fourbyfour == 1 and fivebyfour == 1:
 			$'p2-4454-up'.visible = true
 			fourbyfour = 0
 			fivebyfour = 0
 			squareeightteen = squareeightteen + 1
 			squarenineteen = squarenineteen + 1
-			squareeightteen_check()
+			if squareeightteen == 4:
+				squareeightteen_check()
+			else:
+				squarenineteen_check()
 		if  fourbyfive == 1 and fivebyfive == 1:
 			$'p2-4555-up'.visible = true
 			fourbyfive = 0
 			fivebyfive = 0
 			squarenineteen = squarenineteen + 1
 			squaretwenty = squaretwenty + 1
-			squarenineteen_check()
+			if squarenineteen == 4:
+				squarenineteen_check()
+			else:
+				squarenineteen_check()
 		if  fourbysix == 1 and fivebysix == 1:
 			$'p2-4656-up'.visible = true
 			fourbysix = 0
@@ -772,35 +977,130 @@ func showSpriteWhenBothAreOne():
 			threebytwo = 0
 			squaresix = squaresix + 1
 			squareeleven = squareeleven + 1
-			squaresix_check()
+			if squaresix == 4:
+				squaresix_check()
+			else:
+				squareeleven_check()
 		if  threebytwo == 1 and threebythree == 1:
 			$'p2-3233-over'.visible = true
 			threebytwo = 0
 			threebythree = 0
 			squareseven = squareseven + 1
 			squaretwelve = squaretwelve + 1
-			squareseven_check()
+			if squareseven == 4:
+				squareseven_check()
+			else:
+				squaretwelve_check()
 		if  threebythree == 1 and threebyfour == 1:
 			$'p2-3334-over'.visible = true
 			threebythree = 0
 			threebyfour = 0
 			squareeight = squareeight + 1
 			squarethirteen = squarethirteen + 1
-			squareeight_check()
+			if squareeight == 4:
+				squareeight_check()
+			else:
+				squarethirteen_check()
 		if  threebyfour == 1 and threebyfive == 1:
 			$'p2-3435-over'.visible = true
 			threebyfour = 0
 			threebyfive = 0
 			squarenine = squarenine + 1
 			squarefourteen = squarefourteen + 1
-			squarenine_check()
+			if squarenine == 4:
+				squarenine_check()
+			else:
+				squarefourteen_check()
 		if  threebyfive == 1 and threebysix == 1:
 			$'p2-3536-over'.visible = true
 			threebyfive = 0
 			threebysix = 0
 			squareten = squareten + 1
 			squarefifteen = squarefifteen + 1
-			squareten_check()
+			if squareten == 4:
+				squareten_check()
+			else:
+				squarefifteen_check()
+		if  fourbyone == 1 and fourbytwo == 1:
+			$'p2-4142-over'.visible = true
+			fourbyone = 0
+			fourbytwo = 0
+			squareeleven = squareeleven + 1
+			squaresixteen = squaresixteen + 1
+			if squareeleven == 4:
+				squareeleven_check()
+			else:
+				squaresixteen_check()
+		if  fourbytwo == 1 and fourbythree == 1:
+			$'p2-4243-over'.visible = true
+			fourbytwo = 0
+			fourbythree = 0
+			squaretwelve = squaretwelve + 1
+			squareseventeen = squareseventeen + 1
+			if squaretwelve == 4:
+				squaretwelve_check()
+			else:
+				squareseventeen_check()
+		if  fourbythree == 1 and fourbyfour == 1:
+			$'p2-4344-over'.visible = true
+			fourbythree = 0
+			fourbyfour = 0
+			squarethirteen = squarethirteen + 1
+			squareeightteen = squareeightteen + 1
+			if squarethirteen == 4:
+				squarethirteen_check()
+			else:
+				squareeightteen_check()
+		if  fourbyfour == 1 and fourbyfive == 1:
+			$'p2-4445-over'.visible = true
+			fourbyfour = 0
+			fourbyfive = 0
+			squarefourteen = squarefourteen + 1
+			squarenineteen = squarenineteen + 1
+			if squarefourteen == 4:
+				squarefourteen_check()
+			else:
+				squarenineteen_check()
+		if  fourbyfive == 1 and fourbysix == 1:
+			$'p2-4546-over'.visible = true
+			fourbyfive = 0
+			fourbysix = 0
+			squarefifteen = squarefifteen + 1
+			squaretwenty = squaretwenty + 1
+			if squarefifteen == 4:
+				squarefifteen_check()
+			else:
+				squaretwenty_check()
+		if fivebyone == 1 and fivebytwo == 1:
+			$'p2-5152-over'.visible = true
+			fivebyone = 0
+			fivebytwo = 0
+			squaresixteen = squaresixteen + 1
+			squaresixteen_check()
+		if  fivebytwo == 1 and fivebythree == 1:
+			$'p2-5253-over'.visible = true
+			fivebytwo = 0
+			fivebythree = 0
+			squareseventeen = squareseventeen + 1
+			squareseventeen_check()
+		if  fivebythree == 1 and fivebyfour == 1:
+			$'p2-5354-over'.visible = true
+			fivebythree = 0
+			fivebyfour = 0
+			squareeightteen = squareeightteen + 1
+			squareeightteen_check()
+		if  fivebyfour == 1 and fivebyfive == 1:
+			$'p2-5455-over'.visible = true
+			fivebyfour = 0
+			fivebyfive = 0
+			squarenineteen = squarenineteen + 1
+			squarenineteen_check()
+		if  fivebyfive == 1 and fivebysix == 1:
+			$'p2-5556-over'.visible = true
+			fivebyfive = 0
+			fivebysix = 0
+			squaretwenty = squaretwenty + 1
+			squaretwenty_check()
 
 
 func squareone_check():
@@ -1026,7 +1326,7 @@ func squarethirteen_check():
 			squarethirteen = 0
 
 func squarefourteen_check():
-	if squarefour == 4:
+	if squarefourteen == 4:
 		if playerturn == 1:
 			$'p1square14'.visible = true
 			if squarefifteen == 4:
@@ -1119,7 +1419,7 @@ func squarenineteen_check():
 			squarenineteen = 0
 
 func squaretwenty_check():
-	if squarefive == 4:
+	if squaretwenty == 4:
 		if playerturn == 1:
 			$'p1square20'.visible = true
 			playerturn = 2
