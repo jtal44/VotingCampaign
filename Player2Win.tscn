@@ -1,10 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://du6o180vvlfos"]
+[gd_scene load_steps=4 format=3 uid="uid://du6o180vvlfos"]
 
 [ext_resource type="Texture2D" uid="uid://dtm2n83t4xxlb" path="res://Player2Win.png" id="1_40t3o"]
+[ext_resource type="Script" path="res://Player2Win.gd" id="1_p3gfr"]
+[ext_resource type="Script" path="res://Button3.gd" id="2_uoier"]
 
 [node name="Player2" type="Node2D"]
+script = ExtResource("1_p3gfr")
 
 [node name="Player2Win" type="Sprite2D" parent="."]
-position = Vector2(620, 340)
-scale = Vector2(0.667758, 0.659259)
+position = Vector2(616, 340)
+scale = Vector2(0.672122, 0.659259)
 texture = ExtResource("1_40t3o")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 168.0
+offset_right = 416.0
+offset_bottom = 96.0
+script = ExtResource("2_uoier")
+
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
