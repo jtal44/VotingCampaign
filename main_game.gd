@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var playerturn = 1
 var buttoncount = 0
 var squareone = 0
@@ -23,6 +24,7 @@ var squareeightteen = 0
 var squarenineteen = 0
 var squaretwenty = 0
 
+var totalclicks = 0
 
 var onebyone = 0
 var onebytwo = 0
@@ -55,14 +57,63 @@ var fivebyfour = 0
 var fivebyfive = 0
 var fivebysix = 0
 
+var squares = {
+		"square1value": 0,
+		"square2value": 0,
+		"square3value": 0,
+		"square4value": 0,
+		"square5value": 0,
+		"square6value": 0,
+		"square7value": 0,
+		"square8value": 0,
+		"square9value": 0,
+		"square10value": 0,
+		"square11value": 0,
+		"square12value": 0,
+		"square13value": 0,
+		"square14value": 0,
+		"square15value": 0,
+		"square16value": 0,
+		"square17value": 0,
+		"square18value": 0,
+		"square19value": 0,
+		"square20value": 0,
+	}
+
+
+
 
 func _ready():
+	#print("Ready")
+	#_generate()
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if totalclicks == 98:
+		#print("End game")
+		if Player1Info.score < Player2Info.score:
+			get_tree().change_scene_to_file("res://Player2Win.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Player1Win.tscn")
 
+func _generate():
+		# Iterate over each key in the squares dictionary
+	for key in MainGame.squares.keys():
+		# Generate a unique random number for each square
+		var random_chance = randf()
+		var random_number = 0
+		if random_chance <= 0.08:
+			random_number = randi() % 50001 + 100000
+		else:
+			random_number = randi() % 20001 + 10000
+
+		# Update the current square's value in the original dictionary
+		MainGame.squares[key] = random_number
+
+	# Print the final values
+	for key in MainGame.squares.keys():
+		print(key + ": " + str(MainGame.squares[key]))
 
 func _on_button_pressed():
 	onebyone = 1
@@ -247,18 +298,22 @@ func _on_x_28_pressed():
 
 func player_update():
 	if buttoncount == 2:
-		if playerturn == 2:
-			playerturn = 1
+		if MainGame.playerturn == 2:
+			MainGame.playerturn = 1
 			buttoncount = 0
+			totalclicks = totalclicks + 2
+			#print(totalclicks)
 			#print("player turn: ", str(playerturn))
 		else:
-			playerturn = 2
+			MainGame.playerturn = 2
 			buttoncount = 0
+			totalclicks = totalclicks + 2
+			#print(totalclicks)
 			#print("player turn: ", str(playerturn))
 
 
 func showSpriteWhenBothAreOne():
-	if playerturn == 1:
+	if MainGame.playerturn == 1:
 		if onebyone == 1 and onebytwo == 1:
 			$'p1-1112-over'.visible = true
 			onebyone = 0
@@ -682,7 +737,7 @@ func showSpriteWhenBothAreOne():
 
 
 
-	if playerturn == 2:
+	if MainGame.playerturn == 2:
 		if onebyone == 1 and onebytwo == 1:
 			$'p2-1112-over'.visible = true
 			onebyone = 0
@@ -1105,14 +1160,14 @@ func showSpriteWhenBothAreOne():
 
 func squareone_check():
 	if squareone == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square1'.visible = true
 			if squaretwo == 4:
 				$'p1square2'.visible = true
-				print("square two executed")
+				#print("square two executed")
 			if squaresix == 4:
 				$'p1square6'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squareone = 0
 			
 		else:
@@ -1121,37 +1176,37 @@ func squareone_check():
 				$'p2square2'.visible = true
 			if squaresix == 4:
 				$'p2square6'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squareone = 0
 
 
 func squaretwo_check():
 	if squaretwo == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square2'.visible = true
 			if squarethree == 4:
 				$'p1square3'.visible = true
 			if squareseven == 4:
 				$'p1square7'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squaretwo = 0
 			
 		else:
 			$'p2square2'.visible = true
 			if squareseven == 4:
 				$'p2square7'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squaretwo = 0
 
 func squarethree_check():
 	if squarethree == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square3'.visible = true
 			if squarefour == 4:
 				$'p1square4'.visible = true
 			if squareeight == 4:
 				$'p1square8'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squarethree = 0
 			
 		else:
@@ -1160,18 +1215,18 @@ func squarethree_check():
 				$'p2square4'.visible = true
 			if squareeight == 4:
 				$'p2square8'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squarethree = 0
 
 func squarefour_check():
 	if squarefour == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square4'.visible = true
 			if squarefive == 4:
 				$'p1square5'.visible = true
 			if squarenine == 4:
 				$'p1square9'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squarefour = 0
 			
 		else:
@@ -1180,254 +1235,254 @@ func squarefour_check():
 				$'p2square5'.visible = true
 			if squarenine == 4:
 				$'p2square9'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squarefour = 0
 
 func squarefive_check():
 	if squarefive == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square5'.visible = true
 			if squareten == 4:
 				$'p1square10'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squarefive = 0
 			
 		else:
 			$'p2square5'.visible = true
 			if squareten == 4:
 				$'p2square10'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squarefive = 0
 			
 func squaresix_check():
 	if squaresix == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square6'.visible = true
 			if squareseven == 4:
 				$'p1square7'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squaresix = 0
 			
 		else:
 			$'p2square6'.visible = true
 			if squareseven == 4:
 				$'p2square7'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squaresix = 0
 
 
 func squareseven_check():
 	if squareseven == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square7'.visible = true
 			if squareeight == 4:
 				$'p1square8'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squareseven = 0
 			
 		else:
 			$'p2square7'.visible = true
 			if squareeight == 4:
 				$'p2square8'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squareseven = 0
 
 func squareeight_check():
 	if squareeight == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square8'.visible = true
 			if squarenine == 4:
 				$'p1square9'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squareeight = 0
 			
 		else:
 			$'p2square8'.visible = true
 			if squarenine == 4:
 				$'p2square9'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squareeight = 0
 
 func squarenine_check():
 	if squarenine == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square9'.visible = true
 			if squareten == 4:
 				$'p1square10'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squarenine = 0
 			
 		else:
 			$'p2square9'.visible = true
 			if squarenine == 4:
 				$'p2square10'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squarenine = 0
 
 func squareten_check():
 	if squareten == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square10'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squareten = 0
 			
 		else:
 			$'p2square10'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squareten = 0
 
 func squareeleven_check():
 	if squareeleven == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square11'.visible = true
 			if squaretwelve == 4:
 				$'p1square12'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squareeleven = 0
 			
 		else:
 			$'p2square11'.visible = true
 			if squaretwelve == 4:
 				$'p2square12'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squareeleven = 0
 
 
 func squaretwelve_check():
 	if squaretwelve == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square12'.visible = true
 			if squarethirteen == 4:
 				$'p1square13'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squaretwelve = 0
 			
 		else:
 			$'p2square12'.visible = true
 			if squarethirteen == 4:
 				$'p2square13'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squaretwelve = 0
 
 func squarethirteen_check():
 	if squarethirteen == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square13'.visible = true
 			if squarefourteen == 4:
 				$'p1square14'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squarethirteen = 0
 			
 		else:
 			$'p2square13'.visible = true
 			if squarefourteen == 4:
 				$'p2square14'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squarethirteen = 0
 
 func squarefourteen_check():
 	if squarefourteen == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square14'.visible = true
 			if squarefifteen == 4:
 				$'p1square15'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squarefourteen = 0
 			
 		else:
 			$'p2square14'.visible = true
 			if squarefifteen == 4:
 				$'p2square15'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squarefourteen = 0
 
 func squarefifteen_check():
 	if squarefifteen == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square15'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squarefifteen = 0
 			
 		else:
 			$'p2square15'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squarefifteen = 0
 
 func squaresixteen_check():
 	if squaresixteen == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square16'.visible = true
 			if squareseventeen == 4:
 				$'p1square17'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squaresixteen = 0
 			
 		else:
 			$'p2square16'.visible = true
 			if squareseventeen == 4:
 				$'p2square17'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squaresixteen = 0
 
 
 func squareseventeen_check():
 	if squareseventeen == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square17'.visible = true
 			if squareeightteen == 4:
 				$'p1square18'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squareseventeen = 0
 			
 		else:
 			$'p2square17'.visible = true
 			if squareeightteen == 4:
 				$'p2square18'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squareseventeen = 0
 
 func squareeightteen_check():
 	if squareeightteen == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square18'.visible = true
 			if squarenineteen == 4:
 				$'p1square19'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squareeightteen = 0
 			
 		else:
 			$'p2square18'.visible = true
 			if squarenineteen == 4:
 				$'p2square19'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squareeightteen = 0
 
 func squarenineteen_check():
 	if squarenineteen == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square19'.visible = true
 			if squaretwenty == 4:
 				$'p1square20'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squarenineteen = 0
 			
 		else:
 			$'p2square19'.visible = true
 			if squaretwenty == 4:
 				$'p2square20'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squarenineteen = 0
 
 func squaretwenty_check():
 	if squaretwenty == 4:
-		if playerturn == 1:
+		if MainGame.playerturn == 1:
 			$'p1square20'.visible = true
-			playerturn = 2
+			MainGame.playerturn = 2
 			squaretwenty = 0
 			
 		else:
 			$'p2square20'.visible = true
-			playerturn = 1
+			MainGame.playerturn = 1
 			squaretwenty = 0
 
 

@@ -18,3 +18,5 @@ config/icon="res://icon.svg"
 [autoload]
 
 MainGame="*res://main_game.gd"
+Player1Info="*res://Player1 Info.gd"
+Player2Info="*res://Player2 Info.gd"

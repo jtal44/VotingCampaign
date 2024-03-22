@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bikmtln6hen8y"]
+[gd_scene load_steps=34 format=3 uid="uid://bikmtln6hen8y"]
 
 [ext_resource type="Script" path="res://main_game.gd" id="1_8bj6c"]
 [ext_resource type="Texture2D" uid="uid://bj4xcajj25ltd" path="res://US.png" id="1_vjvhy"]
+[ext_resource type="Script" path="res://NumberGenerate.gd" id="2_2yk7a"]
 [ext_resource type="Texture2D" uid="uid://306jog43q21s" path="res://Dot.png" id="2_g04d6"]
-[ext_resource type="Script" path="res://Sqaure.gd" id="3_h7054"]
 [ext_resource type="Texture2D" uid="uid://bsjfs28em57ou" path="res://Up1.png" id="3_kswca"]
 [ext_resource type="Texture2D" uid="uid://r4we83yu7uar" path="res://Over1.png" id="4_l6pns"]
 [ext_resource type="Texture2D" uid="uid://bnadoyicjbgev" path="res://Player1Square.png" id="5_hxxy8"]
@@ -13,6 +13,26 @@
 [ext_resource type="Script" path="res://Player1 Info.gd" id="11_8juk7"]
 [ext_resource type="Script" path="res://CurrentTurn.gd" id="11_bm8fc"]
 [ext_resource type="Script" path="res://Player2 Info.gd" id="12_bo0ca"]
+[ext_resource type="Script" path="res://Square1Votes.gd" id="14_0no4y"]
+[ext_resource type="Script" path="res://Square2Votes.gd" id="15_5o0gt"]
+[ext_resource type="Script" path="res://Square3Votes.gd" id="16_k1jvu"]
+[ext_resource type="Script" path="res://Square4Votes.gd" id="17_8uaor"]
+[ext_resource type="Script" path="res://Square5Votes.gd" id="18_pskxp"]
+[ext_resource type="Script" path="res://Square6Votes.gd" id="19_e4xwy"]
+[ext_resource type="Script" path="res://Square7Votes.gd" id="20_sn6no"]
+[ext_resource type="Script" path="res://Square8Votes.gd" id="21_ww1ol"]
+[ext_resource type="Script" path="res://Square9Votes.gd" id="22_6b6ij"]
+[ext_resource type="Script" path="res://Square10Votes.gd" id="23_whvh4"]
+[ext_resource type="Script" path="res://Square11Votes.gd" id="24_dbxgk"]
+[ext_resource type="Script" path="res://Square12Votes.gd" id="25_jpos4"]
+[ext_resource type="Script" path="res://Square13Votes.gd" id="26_26bb7"]
+[ext_resource type="Script" path="res://Square14Votes.gd" id="27_k8hhh"]
+[ext_resource type="Script" path="res://Square15Votes.gd" id="28_pqpw0"]
+[ext_resource type="Script" path="res://Square16Votes.gd" id="29_i5113"]
+[ext_resource type="Script" path="res://Square17Votes.gd" id="30_gaba4"]
+[ext_resource type="Script" path="res://Square18Votes.gd" id="31_06t0g"]
+[ext_resource type="Script" path="res://Square19Votes.gd" id="32_ut8cq"]
+[ext_resource type="Script" path="res://Square20Votes.gd" id="33_erqud"]
 
 [node name="mainGame" type="Node2D"]
 script = ExtResource("1_8bj6c")
@@ -20,6 +40,7 @@ script = ExtResource("1_8bj6c")
 [node name="MainCamera" type="Camera2D" parent="."]
 position = Vector2(632, 304)
 zoom = Vector2(0.92, 0.88)
+script = ExtResource("2_2yk7a")
 
 [node name="Map" type="Sprite2D" parent="."]
 position = Vector2(632, 304)
@@ -111,146 +132,6 @@ offset_top = 424.0
 offset_right = 794.0
 offset_bottom = 482.0
 icon = ExtResource("2_g04d6")
-
-[node name="1" type="Label" parent="Grid"]
-offset_left = 144.0
-offset_top = 496.0
-offset_right = 248.0
-offset_bottom = 559.0
-script = ExtResource("3_h7054")
-
-[node name="2" type="Label" parent="Grid"]
-offset_left = 272.0
-offset_top = 496.0
-offset_right = 376.0
-offset_bottom = 559.0
-script = ExtResource("3_h7054")
-
-[node name="3" type="Label" parent="Grid"]
-offset_left = 400.0
-offset_top = 496.0
-offset_right = 504.0
-offset_bottom = 559.0
-script = ExtResource("3_h7054")
-
-[node name="4" type="Label" parent="Grid"]
-offset_left = 528.0
-offset_top = 496.0
-offset_right = 632.0
-offset_bottom = 559.0
-script = ExtResource("3_h7054")
-
-[node name="5" type="Label" parent="Grid"]
-offset_left = 656.0
-offset_top = 496.0
-offset_right = 760.0
-offset_bottom = 559.0
-script = ExtResource("3_h7054")
-
-[node name="6" type="Label" parent="Grid"]
-offset_left = 136.0
-offset_top = 368.0
-offset_right = 240.0
-offset_bottom = 431.0
-script = ExtResource("3_h7054")
-
-[node name="7" type="Label" parent="Grid"]
-offset_left = 264.0
-offset_top = 368.0
-offset_right = 368.0
-offset_bottom = 431.0
-script = ExtResource("3_h7054")
-
-[node name="8" type="Label" parent="Grid"]
-offset_left = 392.0
-offset_top = 368.0
-offset_right = 496.0
-offset_bottom = 431.0
-script = ExtResource("3_h7054")
-
-[node name="9" type="Label" parent="Grid"]
-offset_left = 520.0
-offset_top = 368.0
-offset_right = 624.0
-offset_bottom = 431.0
-script = ExtResource("3_h7054")
-
-[node name="10" type="Label" parent="Grid"]
-offset_left = 648.0
-offset_top = 368.0
-offset_right = 752.0
-offset_bottom = 431.0
-script = ExtResource("3_h7054")
-
-[node name="11" type="Label" parent="Grid"]
-offset_left = 144.0
-offset_top = 232.0
-offset_right = 248.0
-offset_bottom = 295.0
-script = ExtResource("3_h7054")
-
-[node name="12" type="Label" parent="Grid"]
-offset_left = 272.0
-offset_top = 232.0
-offset_right = 376.0
-offset_bottom = 295.0
-script = ExtResource("3_h7054")
-
-[node name="13" type="Label" parent="Grid"]
-offset_left = 400.0
-offset_top = 232.0
-offset_right = 504.0
-offset_bottom = 295.0
-script = ExtResource("3_h7054")
-
-[node name="14" type="Label" parent="Grid"]
-offset_left = 528.0
-offset_top = 232.0
-offset_right = 632.0
-offset_bottom = 295.0
-script = ExtResource("3_h7054")
-
-[node name="15" type="Label" parent="Grid"]
-offset_left = 656.0
-offset_top = 232.0
-offset_right = 760.0
-offset_bottom = 295.0
-script = ExtResource("3_h7054")
-
-[node name="16" type="Label" parent="Grid"]
-offset_left = 144.0
-offset_top = 104.0
-offset_right = 248.0
-offset_bottom = 167.0
-script = ExtResource("3_h7054")
-
-[node name="17" type="Label" parent="Grid"]
-offset_left = 272.0
-offset_top = 104.0
-offset_right = 376.0
-offset_bottom = 167.0
-script = ExtResource("3_h7054")
-
-[node name="18" type="Label" parent="Grid"]
-offset_left = 400.0
-offset_top = 104.0
-offset_right = 504.0
-offset_bottom = 167.0
-script = ExtResource("3_h7054")
-
-[node name="19" type="Label" parent="Grid"]
-offset_left = 528.0
-offset_top = 104.0
-offset_right = 632.0
-offset_bottom = 167.0
-script = ExtResource("3_h7054")
-
-[node name="20" type="Label" parent="Grid"]
-offset_left = 656.0
-offset_top = 104.0
-offset_right = 760.0
-offset_bottom = 167.0
-script = ExtResource("3_h7054")
 
 [node name="3x1" type="Button" parent="Grid"]
 offset_left = 96.0
@@ -1212,6 +1093,146 @@ offset_top = 248.0
 offset_right = 1192.0
 offset_bottom = 319.0
 script = ExtResource("11_bm8fc")
+
+[node name="Square1Votes" type="Label" parent="."]
+offset_left = 136.0
+offset_top = 496.0
+offset_right = 240.0
+offset_bottom = 552.0
+script = ExtResource("14_0no4y")
+
+[node name="Square2Votes" type="Label" parent="."]
+offset_left = 272.0
+offset_top = 496.0
+offset_right = 360.0
+offset_bottom = 544.0
+script = ExtResource("15_5o0gt")
+
+[node name="Square3Votes" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 496.0
+offset_right = 488.0
+offset_bottom = 544.0
+script = ExtResource("16_k1jvu")
+
+[node name="Square4Votes" type="Label" parent="."]
+offset_left = 528.0
+offset_top = 496.0
+offset_right = 616.0
+offset_bottom = 544.0
+script = ExtResource("17_8uaor")
+
+[node name="Square5Votes" type="Label" parent="."]
+offset_left = 656.0
+offset_top = 496.0
+offset_right = 752.0
+offset_bottom = 544.0
+script = ExtResource("18_pskxp")
+
+[node name="Square6Votes" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 360.0
+offset_right = 232.0
+offset_bottom = 408.0
+script = ExtResource("19_e4xwy")
+
+[node name="Square7Votes" type="Label" parent="."]
+offset_left = 272.0
+offset_top = 360.0
+offset_right = 376.0
+offset_bottom = 416.0
+script = ExtResource("20_sn6no")
+
+[node name="Square8Votes" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 360.0
+offset_right = 504.0
+offset_bottom = 416.0
+script = ExtResource("21_ww1ol")
+
+[node name="Square9Votes" type="Label" parent="."]
+offset_left = 520.0
+offset_top = 368.0
+offset_right = 632.0
+offset_bottom = 416.0
+script = ExtResource("22_6b6ij")
+
+[node name="Square10Votes" type="Label" parent="."]
+offset_left = 648.0
+offset_top = 360.0
+offset_right = 760.0
+offset_bottom = 416.0
+script = ExtResource("23_whvh4")
+
+[node name="Square11Votes" type="Label" parent="."]
+offset_left = 136.0
+offset_top = 232.0
+offset_right = 248.0
+offset_bottom = 280.0
+script = ExtResource("24_dbxgk")
+
+[node name="Square12Votes" type="Label" parent="."]
+offset_left = 264.0
+offset_top = 232.0
+offset_right = 376.0
+offset_bottom = 280.0
+script = ExtResource("25_jpos4")
+
+[node name="Square13Votes" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 224.0
+offset_right = 496.0
+offset_bottom = 280.0
+script = ExtResource("26_26bb7")
+
+[node name="Square14Votes" type="Label" parent="."]
+offset_left = 512.0
+offset_top = 240.0
+offset_right = 632.0
+offset_bottom = 288.0
+script = ExtResource("27_k8hhh")
+
+[node name="Square15Votes" type="Label" parent="."]
+offset_left = 648.0
+offset_top = 240.0
+offset_right = 760.0
+offset_bottom = 288.0
+script = ExtResource("28_pqpw0")
+
+[node name="Square16Votes" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 104.0
+offset_right = 248.0
+offset_bottom = 159.0
+script = ExtResource("29_i5113")
+
+[node name="Square17Votes" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 104.0
+offset_right = 376.0
+offset_bottom = 159.0
+script = ExtResource("30_gaba4")
+
+[node name="Square18Votes" type="Label" parent="."]
+offset_left = 384.0
+offset_top = 104.0
+offset_right = 488.0
+offset_bottom = 159.0
+script = ExtResource("31_06t0g")
+
+[node name="Square19Votes" type="Label" parent="."]
+offset_left = 512.0
+offset_top = 104.0
+offset_right = 616.0
+offset_bottom = 159.0
+script = ExtResource("32_ut8cq")
+
+[node name="Square20Votes" type="Label" parent="."]
+offset_left = 648.0
+offset_top = 104.0
+offset_right = 744.0
+offset_bottom = 159.0
+script = ExtResource("33_erqud")
 
 [node name="Player1 Info" type="Label" parent="."]
 offset_left = 1032.0
