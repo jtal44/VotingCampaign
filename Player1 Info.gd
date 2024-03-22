@@ -32,7 +32,6 @@ func _ready():
 func _process(delta):
 	self.text = "Player 1 Score:\n" + str(score)
 
-	# Access p1square1 relative to "/root/mainGame"
 	var main_game = get_node("/root/mainGame")
 	if main_game:
 		if hold1 == 0:

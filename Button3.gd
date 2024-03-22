@@ -1,13 +1,11 @@
-extends Label
+extends Button
 
-var test = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	self.text = str("Menu")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var playerturn = MainGame.playerturn
-	self.text = "It is player " + str(playerturn) + "'s turn. "
+	pass

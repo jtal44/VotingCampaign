@@ -111,9 +111,6 @@ func _generate():
 		# Update the current square's value in the original dictionary
 		MainGame.squares[key] = random_number
 
-	# Print the final values
-	for key in MainGame.squares.keys():
-		print(key + ": " + str(MainGame.squares[key]))
 
 func _on_button_pressed():
 	onebyone = 1
@@ -1293,7 +1290,7 @@ func squareeight_check():
 			$'p1square8'.visible = true
 			if squarenine == 4:
 				$'p1square9'.visible = true
-			MainGame.playerturn = 2
+			MainGame.playerturn = 1
 			squareeight = 0
 			
 		else:
