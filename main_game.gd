@@ -538,7 +538,7 @@ func showSpriteWhenBothAreOne():
 			squarefourteen = squarefourteen + 1
 			squarefifteen = squarefifteen + 1
 			if squarefourteen == 4:
-				squareone_check()
+				squarefourteen_check()
 			else:
 				squarefifteen_check()
 		if  threebysix == 1 and fourbysix == 1:
@@ -909,6 +909,7 @@ func showSpriteWhenBothAreOne():
 			threebyfive = 0
 			squarenine = squarenine + 1
 			squareten = squareten + 1
+			#print(squareten)
 			if squarenine == 4:
 				squarenine_check()
 			else:
@@ -1016,7 +1017,7 @@ func showSpriteWhenBothAreOne():
 			if squarenineteen == 4:
 				squarenineteen_check()
 			else:
-				squarenineteen_check()
+				squaretwenty_check()
 		if  fourbysix == 1 and fivebysix == 1:
 			$'p2-4656-up'.visible = true
 			fourbysix = 0
@@ -1290,7 +1291,7 @@ func squareeight_check():
 			$'p1square8'.visible = true
 			if squarenine == 4:
 				$'p1square9'.visible = true
-			MainGame.playerturn = 1
+			MainGame.playerturn = 2
 			squareeight = 0
 			
 		else:
@@ -1311,7 +1312,7 @@ func squarenine_check():
 			
 		else:
 			$'p2square9'.visible = true
-			if squarenine == 4:
+			if squareten == 4:
 				$'p2square10'.visible = true
 			MainGame.playerturn = 1
 			squarenine = 0
@@ -1378,6 +1379,7 @@ func squarethirteen_check():
 			squarethirteen = 0
 
 func squarefourteen_check():
+	print(squarefourteen)
 	if squarefourteen == 4:
 		if MainGame.playerturn == 1:
 			$'p1square14'.visible = true
